@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/7aa52bd3-df09-4e2c-8e43-b351277fd5bf)## 스위치 근거리 네트워크
+![image](https://github.com/user-attachments/assets/7aa52bd3-df09-4e2c-8e43-b351277fd5bf)
+## 스위치 근거리 네트워크
 
 스위치는 링크 계층에서 동작하기 때문에 링크 계층 프레임을 교환한다. 또한, 
 네트워크 계층 주소(IP 주소)를 인식하지 않으며, OSPF 같은 라우팅 알고리즘을 사용하지 않는다. 
