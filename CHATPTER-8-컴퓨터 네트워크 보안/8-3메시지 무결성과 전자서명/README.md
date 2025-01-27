@@ -1,4 +1,3 @@
-<img width="866" alt="image" src="https://github.com/user-attachments/assets/489b9e81-2a72-43ad-94ed-0202dae3b9fe" />
 
 ### 공개키를 이용한 기술
 - 대표적인 구현: 전자 서명, 공개키 인증
