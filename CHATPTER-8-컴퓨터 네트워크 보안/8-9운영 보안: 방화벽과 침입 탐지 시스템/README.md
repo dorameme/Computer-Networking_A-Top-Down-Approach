@@ -1,5 +1,4 @@
 # 8.9 운영 보안: 방화벽과 침입 탐지 시스템
-![image](https://github.com/user-attachments/assets/522a5484-75b1-4f6f-9440-bd2572673322)
 ### 8.9.1 방화벽
 
 #### 방화벽 개념
