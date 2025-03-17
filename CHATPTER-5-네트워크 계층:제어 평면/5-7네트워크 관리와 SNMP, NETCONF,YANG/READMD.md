@@ -381,8 +381,29 @@ NETCONF는 설정 데이터를 주고받는 프로토콜이고, 이 데이터가
   - 데이터의 구조와 내용을 설계.
 
 ---
+SNMP(Simple Network Management Protocol)와 NETCONF(Network Configuration Protocol)는 각각 **OSI 7계층 중 응용 계층(Application Layer)에 속하는 프로토콜**이다.
 
-### 결론
-**NETCONF**는 네트워크 관리 프로토콜로, 대규모 네트워크 환경에서 설정 관리와 자동화 작업을 수행.  
-**YANG**은 NETCONF가 처리할 데이터를 **정의**하는 역할을 할 뿐, 직접적으로 네트워크를 관리하거나 자동화하지는 않음.  
-따라서 YANG은 NETCONF를 **보조**하는 도구
+### 1. **SNMP (Simple Network Management Protocol)**
+   - **OSI 계층:** **응용 계층 (Application Layer)**
+   - **역할:** 네트워크 장비(라우터, 스위치, 서버 등)의 상태를 모니터링하고 관리하는 프로토콜이다.
+   - **특징:**
+     - UDP 기반 (기본적으로 포트 161, 162 사용)
+     - MIB(Management Information Base)를 이용하여 데이터를 저장하고 관리
+     - SNMPv1, SNMPv2c, SNMPv3 등 다양한 버전 존재
+
+### 2. **NETCONF (Network Configuration Protocol)**
+   - **OSI 계층:** **응용 계층 (Application Layer)**
+   - **역할:** 네트워크 장비의 설정을 원격으로 변경하고 관리하는 프로토콜이다.
+   - **특징:**
+     - XML 기반의 데이터 모델을 사용
+     - SSH를 기본 전송 계층으로 사용 (기본 포트 830)
+     - 트랜잭션 기반의 네트워크 설정 가능 (원자적 변경 지원)
+     - YANG 모델을 사용하여 장비 설정을 정의
+
+### **비교**
+| 프로토콜  | OSI 계층 | 주 역할 | 전송 방식 |
+|-----------|---------|---------|---------|
+| SNMP      | 응용 계층 | 네트워크 모니터링 및 관리 | UDP (161, 162) |
+| NETCONF   | 응용 계층 | 네트워크 설정 및 구성 관리 | SSH (830) |
+
+따라서 SNMP와 NETCONF는 모두 **응용 계층 프로토콜**이며, SNMP는 **모니터링 중심**, NETCONF는 **설정 및 구성 관리 중심**의 역할을 한다.
