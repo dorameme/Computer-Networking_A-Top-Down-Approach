@@ -22,23 +22,23 @@ ARQ(Automatic Repeat reQuest, 자동 반복 요청)는 데이터 전송 중 오�
 
 ### 3. ARQ 방식의 종류  
 
-🔹 (1) Stop-and-Wait ARQ (정지-대기 ARQ, 데이터 링크 계층)  
+ (1) Stop-and-Wait ARQ (정지-대기 ARQ, 데이터 링크 계층)  
 - 한 번에 하나의 프레임을 전송하고, ACK(수신 확인)를 받을 때까지 대기  
 - ACK를 받지 못하면 해당 프레임을 재전송  
 - 장점: 구현이 간단함  
 - 단점: 전송 대기 시간이 길어 성능이 낮음  
 
-🔹 (2) Go-Back-N ARQ (데이터 링크 계층)  
+ (2) Go-Back-N ARQ (데이터 링크 계층)  
 - 연속적으로 여러 개의 프레임을 전송하고, 오류가 발생하면 해당 프레임 이후 모든 프레임을 다시 전송  
 - 장점: Stop-and-Wait보다 효율적  
 - 단점: 불필요한 중복 재전송 발생 가능  
 
-🔹 (3) Selective Repeat ARQ (데이터 링크 계층)  
+ (3) Selective Repeat ARQ (데이터 링크 계층)  
 - 오류가 발생한 프레임만 선택적으로 재전송  
 - 장점: 재전송 효율이 높음  
 - 단점: 버퍼 관리가 복잡함  
 
-🔹 (4) TCP ARQ (전송 계층, TCP Retransmission)  
+ (4) TCP ARQ (전송 계층, TCP Retransmission)  
 - TCP는 데이터 손실이 발생하면 해당 세그먼트만 재전송 (Selective Acknowledgment, SACK 사용 가능)  
 - 타이머 기반 재전송 및 중복 ACK 기반 재전송을 수행  
 
